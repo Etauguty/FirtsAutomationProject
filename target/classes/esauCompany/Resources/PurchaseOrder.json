@@ -1,0 +1,20 @@
+[
+    {
+        "email" : "standard_user",
+        "password" : "secret_sauce",
+        "productName" : "Sauce Labs Fleece Jacket",
+        "name" : "Esau",
+        "lastName" : "Gutierrez",
+        "zipcode"  : "22900",
+        "confirmationMessage" : "Thank you for your order!"
+    },
+    {
+        "email" : "locked_out_user",
+        "password" : "secret_sauce",
+        "productName" : "Sauce Labs Bike Light",
+        "name" : "Pedro",
+        "lastName" : "Arce",
+        "zipcode"  : "33000",
+        "confirmationMessage" : "Thank you for your order!"
+    }
+    ]

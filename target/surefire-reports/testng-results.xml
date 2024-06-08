@@ -1,26 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-06-04T11:12:55 PDT" name="Suite" finished-at="2024-06-04T11:12:58 PDT" duration-ms="3599">
+  <suite started-at="2024-06-08T11:12:33 PDT" name="Suite" finished-at="2024-06-08T11:12:40 PDT" duration-ms="6901">
     <groups>
-      <group name="Purchase">
-        <method signature="LoginTest.login()[pri:0, instance:esauCompany.Tests.LoginTest@815b41f]" name="login" class="esauCompany.Tests.LoginTest"/>
-      </group> <!-- Purchase -->
+      <group name="Login">
+        <method signature="LoginTest.negativeLogin()[pri:0, instance:esauCompany.Tests.LoginTest@4f49f6af]" name="negativeLogin" class="esauCompany.Tests.LoginTest"/>
+        <method signature="LoginTest.positiveLogin()[pri:0, instance:esauCompany.Tests.LoginTest@4f49f6af]" name="positiveLogin" class="esauCompany.Tests.LoginTest"/>
+        <method signature="LoginTest.problemLogin()[pri:0, instance:esauCompany.Tests.LoginTest@4f49f6af]" name="problemLogin" class="esauCompany.Tests.LoginTest"/>
+      </group> <!-- Login -->
     </groups>
-    <test started-at="2024-06-04T11:12:55 PDT" name="Shopping Test" finished-at="2024-06-04T11:12:55 PDT" duration-ms="7">
+    <test started-at="2024-06-08T11:12:33 PDT" name="Shopping Test" finished-at="2024-06-08T11:12:33 PDT" duration-ms="7">
     </test> <!-- Shopping Test -->
-    <test started-at="2024-06-04T11:12:55 PDT" name="Login Test" finished-at="2024-06-04T11:12:58 PDT" duration-ms="3556">
+    <test started-at="2024-06-08T11:12:34 PDT" name="Login Test" finished-at="2024-06-08T11:12:40 PDT" duration-ms="6539">
       <class name="esauCompany.Tests.LoginTest">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:esauCompany.Tests.LoginTest@815b41f]" started-at="2024-06-04T11:12:55 PDT" name="launchApplication" finished-at="2024-06-04T11:12:58 PDT" duration-ms="3193" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:esauCompany.Tests.LoginTest@4f49f6af]" started-at="2024-06-08T11:12:34 PDT" name="launchApplication" finished-at="2024-06-08T11:12:37 PDT" duration-ms="2779" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="login()[pri:0, instance:esauCompany.Tests.LoginTest@815b41f]" started-at="2024-06-04T11:12:58 PDT" name="login" finished-at="2024-06-04T11:12:58 PDT" duration-ms="258" status="PASS">
+        <test-method signature="negativeLogin()[pri:0, instance:esauCompany.Tests.LoginTest@4f49f6af]" started-at="2024-06-08T11:12:37 PDT" name="negativeLogin" finished-at="2024-06-08T11:12:37 PDT" duration-ms="272" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- login -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:esauCompany.Tests.LoginTest@815b41f]" started-at="2024-06-04T11:12:58 PDT" name="tearDown" finished-at="2024-06-04T11:12:58 PDT" duration-ms="79" status="PASS">
+        </test-method> <!-- negativeLogin -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:esauCompany.Tests.LoginTest@4f49f6af]" started-at="2024-06-08T11:12:37 PDT" name="tearDown" finished-at="2024-06-08T11:12:37 PDT" duration-ms="88" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:esauCompany.Tests.LoginTest@4f49f6af]" started-at="2024-06-08T11:12:37 PDT" name="launchApplication" finished-at="2024-06-08T11:12:38 PDT" duration-ms="1317" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="positiveLogin()[pri:0, instance:esauCompany.Tests.LoginTest@4f49f6af]" started-at="2024-06-08T11:12:38 PDT" name="positiveLogin" finished-at="2024-06-08T11:12:39 PDT" duration-ms="288" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- positiveLogin -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:esauCompany.Tests.LoginTest@4f49f6af]" started-at="2024-06-08T11:12:39 PDT" name="tearDown" finished-at="2024-06-08T11:12:39 PDT" duration-ms="93" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:esauCompany.Tests.LoginTest@4f49f6af]" started-at="2024-06-08T11:12:39 PDT" name="launchApplication" finished-at="2024-06-08T11:12:40 PDT" duration-ms="1329" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="problemLogin()[pri:0, instance:esauCompany.Tests.LoginTest@4f49f6af]" started-at="2024-06-08T11:12:40 PDT" name="problemLogin" finished-at="2024-06-08T11:12:40 PDT" duration-ms="240" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- problemLogin -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:esauCompany.Tests.LoginTest@4f49f6af]" started-at="2024-06-08T11:12:40 PDT" name="tearDown" finished-at="2024-06-08T11:12:40 PDT" duration-ms="93" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

@@ -56,7 +56,7 @@ public class BaseTest {
 			}
 			else if(browserName.contains("firefox"))
 			{
-				System.setProperty("webdriver.edge.driver", "C:\\Users\\esau_\\Documents\\geckodriver.exe");
+				System.setProperty("webdriver.gecko.driver", "C:\\Users\\esau_\\Documents\\geckodriver.exe");
 				driver = new FirefoxDriver();
 			}
 			driver.manage().window().maximize();

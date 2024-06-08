@@ -24,6 +24,9 @@ public class LoginPage extends CommonComponent{
 	@FindBy(id="login-button")
 	WebElement submit;
 	
+	@FindBy(css=".error h3")
+	WebElement errorMessage;
+	
 	public ProductCatalog loginApplication(String email, String password) {
 		userEmail.sendKeys(email);
 		userPassword.sendKeys(password);
@@ -35,6 +38,10 @@ public class LoginPage extends CommonComponent{
 		driver.get("https://www.saucedemo.com/");
 	}
 		
+	public String errorMessageValidation() {
+		 String errorMess = errorMessage.getText();
+		 return errorMess;
+	}
 	
 }
 

@@ -3,13 +3,13 @@
 <suite name="Failed suite [Surefire suite]" verbose="0">
   <test thread-count="5" name="Surefire test(failed)" verbose="0">
     <classes>
-      <class name="esauCompany.Tests.FirstTest">
+      <class name="esauCompany.Tests.ShoppingTest">
         <methods>
-          <include name="setUp"/>
-          <include name="setDown"/>
-          <include name="testExample"/>
+          <include name="launchApplication"/>
+          <include name="tearDown"/>
+          <include name="shopping"/>
         </methods>
-      </class> <!-- esauCompany.Tests.FirstTest -->
+      </class> <!-- esauCompany.Tests.ShoppingTest -->
     </classes>
   </test> <!-- Surefire test(failed) -->
 </suite> <!-- Failed suite [Surefire suite] -->

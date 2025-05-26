@@ -6,7 +6,9 @@ import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.time.Duration;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Properties;
 
 import org.apache.commons.io.FileUtils;
@@ -18,6 +20,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
@@ -41,22 +44,27 @@ public class BaseTest {
 		
 		if(browserName.contains("chrome")) {			
 			ChromeOptions options = new ChromeOptions();
-			System.setProperty("webdriver.chrome.driver", "C:\\Users\\esau_\\Documents\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", "C:\\Users\\esau_\\OneDrive\\Documentos\\chromedriver.exe");
 				/*if(browserName.contains("headless"))
 					{
 					options.addArguments("headless");
 					}*/
+			//to prevent the pop up from chrome asking to change password
+			Map<String, Object> prefs = new LinkedHashMap<>();
+			prefs.put("credentials_enable_service", false);
+			prefs.put("profile.password_manager_leak_detection", false);
+			options.setExperimentalOption("prefs", prefs);
 			driver = new ChromeDriver(options);
 			driver.manage().window().setSize(new Dimension(1440,900));//run in full screen
 			}
 			else if(browserName.contains("edge"))
 			{
-				System.setProperty("webdriver.edge.driver", "C:\\Users\\esau_\\Documents\\msedgedriver.exe");
+				System.setProperty("webdriver.edge.driver", "C:\\Users\\esau_\\OneDrive\\Documentos\\msedgedriver.exe");
 				driver = new EdgeDriver();
 			}
 			else if(browserName.contains("firefox"))
 			{
-				System.setProperty("webdriver.gecko.driver", "C:\\Users\\esau_\\Documents\\geckodriver.exe");
+				System.setProperty("webdriver.gecko.driver", "C:\\Users\\esau_\\OneDrive\\Documentos\\geckodriver.exe");
 				driver = new FirefoxDriver();
 			}
 			driver.manage().window().maximize();

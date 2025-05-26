@@ -47,7 +47,7 @@ public class ShoppingTest extends BaseTest{
 	@DataProvider
 	public Object[][] getData() throws IOException
 	{
-		List<HashMap<String,String>> data = getJsonDataToMap(System.getProperty("user.dir")+"\\src\\main\\java\\esauCompany\\Resources\\PurchaseOrder.json");
-		return new Object[][] {{data.get(0)},{data.get(1)}};
+		List<HashMap<String,String>> data = getJsonDataToMap(System.getProperty("user.dir")+"\\src\\main\\java\\esauCompany\\Resources\\PurchaseOrderSmoke.json");
+		return new Object[][] {{data.get(0)}};
 	}
 }

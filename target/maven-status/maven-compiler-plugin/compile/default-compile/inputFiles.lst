@@ -1,8 +1,8 @@
-D:\Eclipse\FirstTestAutomationProject\src\main\java\esauCompany\PageObjects\ConfirmationPage.java
-D:\Eclipse\FirstTestAutomationProject\src\main\java\esauCompany\PageObjects\VerificationPage.java
-D:\Eclipse\FirstTestAutomationProject\src\main\java\esauCompany\PageObjects\CheckOutPage.java
-D:\Eclipse\FirstTestAutomationProject\src\main\java\esauCompany\Resources\ExtentReporter.java
-D:\Eclipse\FirstTestAutomationProject\src\main\java\esauCompany\PageObjects\LoginPage.java
-D:\Eclipse\FirstTestAutomationProject\src\main\java\esauCompany\CommonComponent\CommonComponent.java
-D:\Eclipse\FirstTestAutomationProject\src\main\java\esauCompany\PageObjects\CartPage.java
-D:\Eclipse\FirstTestAutomationProject\src\main\java\esauCompany\PageObjects\ProductCatalog.java
+C:\Users\esau_\OneDrive\Escritorio\Project\FirtsAutomationProject\src\main\java\esauCompany\PageObjects\ProductCatalog.java
+C:\Users\esau_\OneDrive\Escritorio\Project\FirtsAutomationProject\src\main\java\esauCompany\Resources\ExtentReporter.java
+C:\Users\esau_\OneDrive\Escritorio\Project\FirtsAutomationProject\src\main\java\esauCompany\PageObjects\CheckOutPage.java
+C:\Users\esau_\OneDrive\Escritorio\Project\FirtsAutomationProject\src\main\java\esauCompany\PageObjects\LoginPage.java
+C:\Users\esau_\OneDrive\Escritorio\Project\FirtsAutomationProject\src\main\java\esauCompany\PageObjects\VerificationPage.java
+C:\Users\esau_\OneDrive\Escritorio\Project\FirtsAutomationProject\src\main\java\esauCompany\CommonComponent\CommonComponent.java
+C:\Users\esau_\OneDrive\Escritorio\Project\FirtsAutomationProject\src\main\java\esauCompany\PageObjects\CartPage.java
+C:\Users\esau_\OneDrive\Escritorio\Project\FirtsAutomationProject\src\main\java\esauCompany\PageObjects\ConfirmationPage.java

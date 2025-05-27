@@ -5,9 +5,14 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
+
+import com.aventstack.extentreports.util.Assert;
 
 import esauCompany.CommonComponent.CommonComponent;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class ProductCatalog extends CommonComponent{
@@ -41,4 +46,40 @@ public class ProductCatalog extends CommonComponent{
 		WebElement prod = getProductByName(productName);
 		prod.findElement(addToCartBtn).click();
 	}
+
+	//Section to test the sort Name function
+	@FindBy(className="product_sort_container")
+	WebElement sortButton;
+	@FindBy(className="inventory_item_name")
+	List<WebElement> nameElements;
+
+	public List<String> testSortName(String sortSelection) {
+        Select sort = new Select(sortButton);
+        sort.selectByVisibleText(sortSelection);
+
+        List<String> actualNames = new ArrayList<>();
+        for (WebElement e : nameElements) {
+            actualNames.add(e.getText());
+        }
+
+		return actualNames;
+        
+    }
+
+	//Section to test the sort Price function
+	@FindBy(className="inventory_item_price")
+	List<WebElement> priceElements;
+
+	 public List<Double> testSortPrice(String sortSelection) {
+        Select sort = new Select(sortButton);
+        sort.selectByVisibleText(sortSelection);
+
+        List<Double> actualPrices = new ArrayList<>();
+        for (WebElement e : priceElements) {
+            actualPrices.add(Double.parseDouble(e.getText().replace("$", "")));
+        }
+
+        return actualPrices;
+    }
+
 }

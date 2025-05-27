@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-passed">Suite</span>
+              <span class="suite-name border-failed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -50,17 +50,17 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Suite" class="navigator-link ">
-                    <span>C:\Users\esau_\OneDrive\Escritorio\Project\FirtsAutomationProject\TestSuites\Smoke.xml</span>
+                    <span>C:\Users\esau_\OneDrive\Escritorio\Project\FirtsAutomationProject\TestSuites\SortTesting.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
                   <a href="#" panel-name="testlist-Suite" class="navigator-link ">
-                    <span class="test-stats">2 tests</span>
+                    <span class="test-stats">1 test</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
                   <a href="#" panel-name="group-Suite" class="navigator-link ">
-                    <span>1 group</span>
+                    <span>0 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods,   3 passed</span>
+                    <span class="method-stats">4 methods, 1 failed,   3 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="esauCompany.Tests.ProductPageTest" class="method navigator-link" hash-for-method="SortPriceLowToHigh({zipcode=22900, lastName=Gutierrez, password=secret_sauce, name=Esau, email=standard_user, productNa...)">SortPriceLowToHigh({zipcode=22900, lastName=Gutierrez, password=secret_sauce, name=Esau, email=standard_user, productNa...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,17 +117,17 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="esauCompany.Tests.LoginTest" class="method navigator-link" hash-for-method="negativeLogin">negativeLogin</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="esauCompany.Tests.ProductPageTest" class="method navigator-link" hash-for-method="SortNameTestAToZ({zipcode=22900, lastName=Gutierrez, password=secret_sauce, name=Esau, email=standard_user, productNa...)">SortNameTestAToZ({zipcode=22900, lastName=Gutierrez, password=secret_sauce, name=Esau, email=standard_user, productNa...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="esauCompany.Tests.LoginTest" class="method navigator-link" hash-for-method="positiveLogin">positiveLogin</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="esauCompany.Tests.ProductPageTest" class="method navigator-link" hash-for-method="SortNameTestZToA({zipcode=22900, lastName=Gutierrez, password=secret_sauce, name=Esau, email=standard_user, productNa...)">SortNameTestZToA({zipcode=22900, lastName=Gutierrez, password=secret_sauce, name=Esau, email=standard_user, productNa...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="esauCompany.Tests.ShoppingTest" class="method navigator-link" hash-for-method="shopping({zipcode=22900, lastName=Gutierrez, password=secret_sauce, name=Esau, email=standard_user, productNa...)">shopping({zipcode=22900, lastName=Gutierrez, password=secret_sauce, name=Esau, email=standard_user, productNa...)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="esauCompany.Tests.ProductPageTest" class="method navigator-link" hash-for-method="SortPriceHighToLow({zipcode=22900, lastName=Gutierrez, password=secret_sauce, name=Esau, email=standard_user, productNa...)">SortPriceHighToLow({zipcode=22900, lastName=Gutierrez, password=secret_sauce, name=Esau, email=standard_user, productNa...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -128,40 +142,59 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-passed">
+          <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">esauCompany.Tests.ShoppingTest</span>
+              <img src="failed.png"/>
+              <span class="class-name">esauCompany.Tests.ProductPageTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="shopping({zipcode=22900, lastName=Gutierrez, password=secret_sauce, name=Esau, email=standard_user, productNa...)">
-                  </a> <!-- shopping({zipcode=22900, lastName=Gutierrez, password=secret_sauce, name=Esau, email=standard_user, productNa...) -->
-                  <span class="method-name">shopping</span>
+                  <a name="SortPriceLowToHigh({zipcode=22900, lastName=Gutierrez, password=secret_sauce, name=Esau, email=standard_user, productNa...)">
+                  </a> <!-- SortPriceLowToHigh({zipcode=22900, lastName=Gutierrez, password=secret_sauce, name=Esau, email=standard_user, productNa...) -->
+                  <span class="method-name">SortPriceLowToHigh</span>
                   <span class="parameters">({zipcode=22900, lastName=Gutierrez, password=secret_sauce, name=Esau, email=standard_user, productName=Sauce Labs Fleece Jacket, confirmationMessage=Thank you for your order!})</span>
+                  <div class="stack-trace">java.lang.AssertionError: Prices not sorted low to high.: Lists differ at element [0]: 7.99 != 49.99 expected [7.99] but found [49.99]
+	at esauCompany.Tests.ProductPageTest.SortPriceLowToHigh(ProductPageTest.java:57)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+... Removed 21 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
+          </div> <!-- suite-Suite-class-failed -->
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">esauCompany.Tests.LoginTest</span>
+              <span class="class-name">esauCompany.Tests.ProductPageTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="negativeLogin">
-                  </a> <!-- negativeLogin -->
-                  <span class="method-name">negativeLogin</span>
+                  <a name="SortNameTestAToZ({zipcode=22900, lastName=Gutierrez, password=secret_sauce, name=Esau, email=standard_user, productNa...)">
+                  </a> <!-- SortNameTestAToZ({zipcode=22900, lastName=Gutierrez, password=secret_sauce, name=Esau, email=standard_user, productNa...) -->
+                  <span class="method-name">SortNameTestAToZ</span>
+                  <span class="parameters">({zipcode=22900, lastName=Gutierrez, password=secret_sauce, name=Esau, email=standard_user, productName=Sauce Labs Fleece Jacket, confirmationMessage=Thank you for your order!})</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="positiveLogin">
-                  </a> <!-- positiveLogin -->
-                  <span class="method-name">positiveLogin</span>
+                  <a name="SortNameTestZToA({zipcode=22900, lastName=Gutierrez, password=secret_sauce, name=Esau, email=standard_user, productNa...)">
+                  </a> <!-- SortNameTestZToA({zipcode=22900, lastName=Gutierrez, password=secret_sauce, name=Esau, email=standard_user, productNa...) -->
+                  <span class="method-name">SortNameTestZToA</span>
+                  <span class="parameters">({zipcode=22900, lastName=Gutierrez, password=secret_sauce, name=Esau, email=standard_user, productName=Sauce Labs Fleece Jacket, confirmationMessage=Thank you for your order!})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="SortPriceHighToLow({zipcode=22900, lastName=Gutierrez, password=secret_sauce, name=Esau, email=standard_user, productNa...)">
+                  </a> <!-- SortPriceHighToLow({zipcode=22900, lastName=Gutierrez, password=secret_sauce, name=Esau, email=standard_user, productNa...) -->
+                  <span class="method-name">SortPriceHighToLow</span>
+                  <span class="parameters">({zipcode=22900, lastName=Gutierrez, password=secret_sauce, name=Esau, email=standard_user, productName=Sauce Labs Fleece Jacket, confirmationMessage=Thank you for your order!})</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -169,7 +202,7 @@
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\esau_\OneDrive\Escritorio\Project\FirtsAutomationProject\TestSuites\Smoke.xml</span>
+            <span class="header-content">C:\Users\esau_\OneDrive\Escritorio\Project\FirtsAutomationProject\TestSuites\SortTesting.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -179,16 +212,11 @@
   &lt;listeners&gt;
     &lt;listener class-name=&quot;esauCompany.TestComponents.Listeners&quot;/&gt;
   &lt;/listeners&gt;
-  &lt;test thread-count=&quot;5&quot; parallel=&quot;tests&quot; name=&quot;Shopping Test&quot; verbose=&quot;0&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; parallel=&quot;tests&quot; name=&quot;Sort Test&quot; verbose=&quot;0&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;esauCompany.Tests.ShoppingTest&quot;/&gt;
+      &lt;class name=&quot;esauCompany.Tests.ProductPageTest&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Shopping Test --&gt;
-  &lt;test thread-count=&quot;5&quot; parallel=&quot;tests&quot; name=&quot;Login Test&quot; verbose=&quot;0&quot;&gt;
-    &lt;classes&gt;
-      &lt;class name=&quot;esauCompany.Tests.LoginTest&quot;/&gt;
-    &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Login Test --&gt;
+  &lt;/test&gt; &lt;!-- Sort Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -200,10 +228,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Shopping Test (1 class)</span>
-              </li>
-              <li>
-                <span class="test-name">Login Test (1 class)</span>
+                <span class="test-name">Sort Test (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -213,18 +238,6 @@
             <span class="header-content">Groups for Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="test-group">
-              <span class="test-group-name">Login</span>
-              <br/>
-              <div class="method-in-group">
-                <span class="method-in-group-name">negativeLogin</span>
-                <br/>
-              </div> <!-- method-in-group -->
-              <div class="method-in-group">
-                <span class="method-in-group-name">positiveLogin</span>
-                <br/>
-              </div> <!-- method-in-group -->
-            </div> <!-- test-group -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="times-Suite" class="panel">
@@ -241,24 +254,28 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(3);
+data.addRows(4);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'shopping')
-data.setCell(0, 2, 'esauCompany.Tests.ShoppingTest')
-data.setCell(0, 3, 1396);
+data.setCell(0, 1, 'SortNameTestAToZ')
+data.setCell(0, 2, 'esauCompany.Tests.ProductPageTest')
+data.setCell(0, 3, 632);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'positiveLogin')
-data.setCell(1, 2, 'esauCompany.Tests.LoginTest')
-data.setCell(1, 3, 684);
+data.setCell(1, 1, 'SortPriceLowToHigh')
+data.setCell(1, 2, 'esauCompany.Tests.ProductPageTest')
+data.setCell(1, 3, 453);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'negativeLogin')
-data.setCell(2, 2, 'esauCompany.Tests.LoginTest')
-data.setCell(2, 3, 362);
+data.setCell(2, 1, 'SortNameTestZToA')
+data.setCell(2, 2, 'esauCompany.Tests.ProductPageTest')
+data.setCell(2, 3, 424);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'SortPriceHighToLow')
+data.setCell(3, 2, 'esauCompany.Tests.ProductPageTest')
+data.setCell(3, 3, 423);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 4 seconds</span>
+              <span class="suite-total-time">Total running time: 8 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -284,54 +301,56 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">esauCompany.Tests.LoginTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">esauCompany.Tests.ProductPageTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">launchApplication</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">esauCompany.Tests.ShoppingTest</div> <!-- chronological-class-name -->
-              <div class="configuration-method before">
-                <span class="method-name">launchApplication</span>
-                <span class="method-start">324 ms</span>
-              </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">shopping({zipcode=22900, lastName=Gutierrez, password=secret_sauce, name=Esau, email=standard_user, productNa...)</span>
-                <span class="method-start">2002 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">esauCompany.Tests.LoginTest</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">negativeLogin</span>
-                <span class="method-start">2024 ms</span>
+                <span class="method-name">SortNameTestAToZ({zipcode=22900, lastName=Gutierrez, password=secret_sauce, name=Esau, email=standard_user, productNa...)</span>
+                <span class="method-start">1664 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">2394 ms</span>
+                <span class="method-start">2302 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">launchApplication</span>
-                <span class="method-start">2509 ms</span>
+                <span class="method-start">2426 ms</span>
               </div> <!-- configuration-method before -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">esauCompany.Tests.ShoppingTest</div> <!-- chronological-class-name -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">3399 ms</span>
-              </div> <!-- configuration-method after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">esauCompany.Tests.LoginTest</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">positiveLogin</span>
-                <span class="method-start">3419 ms</span>
+                <span class="method-name">SortNameTestZToA({zipcode=22900, lastName=Gutierrez, password=secret_sauce, name=Esau, email=standard_user, productNa...)</span>
+                <span class="method-start">3709 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">4104 ms</span>
+                <span class="method-start">4133 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">launchApplication</span>
+                <span class="method-start">4238 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">SortPriceHighToLow({zipcode=22900, lastName=Gutierrez, password=secret_sauce, name=Esau, email=standard_user, productNa...)</span>
+                <span class="method-start">5378 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">5801 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">launchApplication</span>
+                <span class="method-start">5904 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">SortPriceLowToHigh({zipcode=22900, lastName=Gutierrez, password=secret_sauce, name=Esau, email=standard_user, productNa...)</span>
+                <span class="method-start">7033 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">7699 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

@@ -7,12 +7,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
-import com.aventstack.extentreports.util.Assert;
-
 import esauCompany.CommonComponent.CommonComponent;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 public class ProductCatalog extends CommonComponent{
@@ -53,7 +50,7 @@ public class ProductCatalog extends CommonComponent{
 	@FindBy(className="inventory_item_name")
 	List<WebElement> nameElements;
 
-	public List<String> testSortName(String sortSelection) {
+	public List<String> getSortedProductNames(String sortSelection) {
         Select sort = new Select(sortButton);
         sort.selectByVisibleText(sortSelection);
 
@@ -70,13 +67,13 @@ public class ProductCatalog extends CommonComponent{
 	@FindBy(className="inventory_item_price")
 	List<WebElement> priceElements;
 
-	 public List<Double> testSortPrice(String sortSelection) {
+	 public List<Double> getSortedProductPrices(String sortSelection) {
         Select sort = new Select(sortButton);
         sort.selectByVisibleText(sortSelection);
 
         List<Double> actualPrices = new ArrayList<>();
         for (WebElement e : priceElements) {
-            actualPrices.add(Double.parseDouble(e.getText().replace("$", "")));
+            actualPrices.add(Double.valueOf(e.getText().replace("$", "")));
         }
 
         return actualPrices;

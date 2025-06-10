@@ -1,0 +1,8 @@
+esauCompany\PageObjects\ConfirmationPage.class
+esauCompany\PageObjects\VerificationPage.class
+esauCompany\PageObjects\ProductCatalog.class
+esauCompany\CommonComponent\CommonComponent.class
+esauCompany\Resources\ExtentReporter.class
+esauCompany\PageObjects\CartPage.class
+esauCompany\PageObjects\CheckOutPage.class
+esauCompany\PageObjects\LoginPage.class

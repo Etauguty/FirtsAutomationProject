@@ -28,6 +28,7 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import esauCompany.PageObjects.LoginPage;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseTest {
 
@@ -44,7 +45,7 @@ public class BaseTest {
 		
 		if(browserName.contains("chrome")) {			
 			ChromeOptions options = new ChromeOptions();
-			System.setProperty("webdriver.chrome.driver", "C:\\Users\\esau_\\OneDrive\\Documentos\\chromedriver.exe");
+			WebDriverManager.chromedriver().setup();
 				/*if(browserName.contains("headless"))
 					{
 					options.addArguments("headless");
@@ -83,7 +84,9 @@ public class BaseTest {
 	
 	@AfterMethod(alwaysRun = true)
 	public void tearDown() {
+		if(driver != null){
 			driver.close();
+		}	
 	}
 	
 	public List<HashMap<String, String>> getJsonDataToMap(String filePath) throws IOException

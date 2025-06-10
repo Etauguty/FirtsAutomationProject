@@ -1,2 +1,7 @@
+esauCompany\TestComponents\Retry.class
+esauCompany\Tests\LoginTest.class
+esauCompany\TestComponents\BaseTest$1.class
 esauCompany\TestComponents\BaseTest.class
+esauCompany\TestComponents\Listeners.class
 esauCompany\Tests\ProductPageTest.class
+esauCompany\Tests\ShoppingTest.class

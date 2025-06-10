@@ -26,7 +26,7 @@ public class ProductPageTest extends BaseTest{
 		//Login to the page
 		ProductCatalog productCatalog = loginPage.loginApplication(input.get("email"), input.get("password"));
 			 
-		List<String> actualNames = productCatalog.testSortName("Name (Z to A)");
+		List<String> actualNames = productCatalog.getSortedProductNames("Name (Z to A)");
 		List<String> expectedNames = new ArrayList<>(actualNames);
         Collections.sort(expectedNames, Collections.reverseOrder());
 
@@ -38,7 +38,7 @@ public class ProductPageTest extends BaseTest{
 		//Login to the page
 		ProductCatalog productCatalog = loginPage.loginApplication(input.get("email"), input.get("password"));
 			 
-		List<String> actualNames = productCatalog.testSortName("Name (A to Z)");
+		List<String> actualNames = productCatalog.getSortedProductNames("Name (A to Z)");
 		List<String> expectedNames = new ArrayList<>(actualNames);
         Collections.sort(expectedNames);
 
@@ -50,7 +50,7 @@ public class ProductPageTest extends BaseTest{
 		//Login to the page
 		ProductCatalog productCatalog = loginPage.loginApplication(input.get("email"), input.get("password"));
 			 
-		List<Double> actualPrices = productCatalog.testSortPrice("Price (low to high)");
+		List<Double> actualPrices = productCatalog.getSortedProductPrices("Price (low to high)");
 		List<Double> expectedPrices = new ArrayList<>(actualPrices);
         Collections.sort(expectedPrices);
 
@@ -62,7 +62,7 @@ public class ProductPageTest extends BaseTest{
 		//Login to the page
 		ProductCatalog productCatalog = loginPage.loginApplication(input.get("email"), input.get("password"));
 			 
-		List<Double> actualPrices = productCatalog.testSortPrice("Price (high to low)");
+		List<Double> actualPrices = productCatalog.getSortedProductPrices("Price (high to low)");
 		List<Double> expectedPrices = new ArrayList<>(actualPrices);
         Collections.sort(expectedPrices, Collections.reverseOrder());
 
